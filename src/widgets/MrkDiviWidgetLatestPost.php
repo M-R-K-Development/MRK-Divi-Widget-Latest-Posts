@@ -58,6 +58,19 @@ class MrkDiviWidgetLatestPost extends DiviCustomWidget
                 )
         );
 
+         $this->addField(
+                array(
+                    'display_category_selection' => array(
+                        'label'             => 'Filter by Category',
+                        'type'              => 'yes_no_button',
+                        'description'       => 'Would you like to filter the posts by category',
+                        'affects'           => array(
+                                    '#et_pb_include_categories'
+                                ),
+                        ),
+                )
+        );
+
         $this->addField(array(
                  'include_categories' => array(
                     'label'           => esc_html__( 'Include from only these categories', 'et_builder' ),
@@ -65,6 +78,7 @@ class MrkDiviWidgetLatestPost extends DiviCustomWidget
                     'render_options'  => array('term_name' => 'category'),
                     'option_category' => 'basic_option',
                     'description'     => esc_html__( 'Select the categories that you would like to include in the feed.', 'et_builder' ),
+                    'depends_show_if' => 'on',
                 ),
       ));
 

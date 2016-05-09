@@ -55,7 +55,7 @@
 
 
 <!-- section container -->
-        <div class='et_pb_section  et_pb_section_0 et_section_regular blog-post-listing'>
+        <div class='blog-post-listing'>
             @while ($wp_query->have_posts())
                     <?php
                         //Set vars
@@ -67,6 +67,7 @@
                     ?>
 <!-- make dynamic -->
             <div class=' et_pb_row et_pb_row_{{ $i }} et_pb_blurb et_pb_module et_pb_blurb_position_left'>
+                <!-- noformat on -->
                 <div class="et_pb_blurb_content clearfix">
                     @if($show_thumbnails == 'on')
                     <div class="et_pb_main_blurb_image">
@@ -74,7 +75,7 @@
                     </div>
                     @endif
                     <div class="et_pb_blurb_container">
-                        <h3><a href="{{ get_the_permalink() }}">{{ get_the_title() }}</a></h3>
+                        <h5><a href="{{ get_the_permalink() }}">{{ get_the_title() }}</a></h5>
                         <p class="post-meta"> <span class="published">{{ get_the_date() }}</span> | <span class="comments-number"><a href="{{ get_post_permalink() }}/#respond">{{ comments_number('0 Comments' ); }}</a></span></p>
                         <p>
                             @if($content_source == 'excerpt')
@@ -88,6 +89,7 @@
 
                     </div>
                 </div>
+                <!-- noformat off -->
             </div>
 
 

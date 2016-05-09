@@ -4,12 +4,14 @@
     width: 100% !important;
     max-width: 100% !important
 }
+/** Need to overwrite the row to stop weird responsive padding appearing */
 .blog-post-listing .et_pb_row {
     padding: 0px !important;
-    margin: 15px 0px !important;
+    margin: 0px 0px 15px 0px !important;
+    width:100% !important;
 }
 .blog-post-listing .et_pb_main_blurb_image {
-    width: 20% !important;
+    width: 28% !important;
     display:inline-block;
 
 
@@ -21,5 +23,9 @@
 .blog-post-listing .et_pb_blurb_container {
     width: 70% !important;
     display:inline-block;
+}
+.blog-post-listing .post-meta{
+    padding-bottom:0em !important;
+    font-size: .75em;
 }
 
